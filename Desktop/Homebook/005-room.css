@@ -1,0 +1,347 @@
+.circle1 {
+   position: absolute;
+   top:200px;
+   right: 400px;
+   width: 45px;
+   height: 45px;
+   background: lightgrey;
+   border-radius: 50px;
+   z-index: 0;
+}
+
+.circle1s {
+   position: absolute;
+   top:210px;
+   right: 350px;
+   width: 25px;
+   height: 25px;
+   background: white;
+   border-radius: 25px;
+   z-index: 1;
+}
+
+
+.circle2 {
+   position: absolute;
+   top:200px;
+   right: 340px;
+   width: 45px;
+   height: 45px;
+   background: #ff4500;
+   border-radius: 50px;
+}
+
+.circle3 {
+  position: absolute;
+  top:200px;
+  right: 280px;
+   width: 45px;
+   height: 45px;
+   background: lightgrey;
+   border-radius: 50px;
+}
+
+.circle4 {
+  position: absolute;
+  top:200px;
+  right: 220px;
+   width: 45px;
+   height: 45px;
+   background: lightgrey;
+   border-radius: 50px;
+}
+
+.circle5 {
+  position: absolute;
+  top:200px;
+  right: 160px;
+   width: 45px;
+   height: 45px;
+   background: lightgrey;
+   border-radius: 50px;
+}
+
+
+.profile {
+   position: absolute;
+   top:250px;
+   right: 405px;
+   font-size: 9px;
+   color: grey;
+}
+
+.room {
+   position: absolute;
+   top:250px;
+   right: 347px;
+   font-size: 9px;
+   color: grey;
+}
+
+.meal-rule {
+  position: absolute;
+  top:250px;
+  right: 280px;
+  font-size: 9px;
+  color: grey;
+}
+
+.calendar {
+  position: absolute;
+  top:250px;
+  right: 230px;
+  font-size: 9px;
+  color: grey;
+}
+
+.pr {
+  position: absolute;
+  top:250px;
+  right: 175px;
+  font-size: 9px;
+  color: grey;
+}
+
+.select{
+  position: relative;
+  top: 230px;
+  left: 160px;
+  font-size: 20px;
+}
+
+
+
+.roomtype{
+  position: relative;
+  left:28px;
+  margin-top: 20px;
+  box shadow: 0;
+  font-size:16px;
+  border: 1;
+  width: 313px;
+  height: 45px;
+  padding: 15px;
+  outline: 0;
+  border-radius: 10px;
+  border: 1px solid #ccc
+}
+
+.guests{
+  position: relative;
+  left: 50px;
+
+}
+
+.capacity-of-guests{
+  position: relative;
+  left: 56px;
+  margin-top: 20px;
+  box shadow: 0;
+  font-size:16px;
+  border: 1;
+  width: 313px;
+  height: 45px;
+  padding: 15px;
+  outline: 0;
+  border-radius: 10px;
+  border: 1px solid #ccc
+}
+
+.number-of-beds{
+  position: relative;
+  left:39px;
+  margin-top: 20px;
+  box shadow: 0;
+  font-size:16px;
+  border: 1;
+  width: 313px;
+  height: 45px;
+  padding: 15px;
+  outline: 0;
+  border-radius: 10px;
+  border: 1px solid #ccc
+}
+
+.bathroom{
+  position: relative;
+  left: 62px;
+
+}
+
+.number-of-bathroom{
+  position: relative;
+  left: 100px;
+  margin-top: 20px;
+  box shadow: 0;
+  font-size:16px;
+  border: 1;
+  width: 313px;
+  height: 45px;
+  padding: 15px;
+  outline: 0;
+  border-radius: 10px;
+  border: 1px solid #ccc
+}
+
+.check{
+  position: relative;
+  top: 100px;
+  left: 0px;
+  font-size: 20px;
+
+}
+
+
+
+.amenities{
+  position: relative;
+  left:-10px;
+  top: 130px;
+  margin-top: 20px;
+  box shadow: 0;
+  font-size:16px;
+  border: 1;
+  width: 313px;
+  height: 45px;
+  padding: 15px;
+  }
+
+  .line0{
+    position: relative;
+    left: 0px;
+    top: 40px;
+    display: block;
+    width: 100%;
+    height: 0px;
+    border-color: white;
+    border; 0;
+    opacity: 30%;
+
+  }
+
+.line1{
+  position: relative;
+  left: 0px;
+  top: 40px;
+  display: block;
+  width: 100%;
+  height: 0px;
+  border-color: white;
+  border; 0;
+  opacity: 30%;
+
+}
+
+.line2{
+  position: relative;
+  left: 0px;
+  top: 40px;
+  display: block;
+  width: 100%;
+  height: 0px;
+  border-color: white;
+  border; 0;
+  opacity: 30%;
+
+}
+
+.line3{
+  position: relative;
+  left: 0px;
+  top: 40px;
+  display: block;
+  width: 100%;
+  height: 0px;
+  border-color: white;
+  border; 0;
+  opacity: 30%;
+
+}
+
+
+/* css checkbox01 */
+
+.checkbox02{
+  position: relative;
+  top: 150px;
+}
+.checkbox01-input{
+  position: relative;
+  left: -10px;
+  top: 70px;
+  display: none;
+}
+.checkbox01-parts{
+  padding-left: 20px;
+  position:relative;
+  margin-right: 20px;
+}
+.checkbox01-parts::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+.checkbox01-input:checked + .checkbox01-parts{
+  color: #009a9a;
+}
+.checkbox01-input:checked + .checkbox01-parts::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  width: 7px;
+  height: 14px;
+  transform: rotate(40deg);
+  border-bottom: 3px solid #009a9a;
+  border-right: 3px solid #009a9a;
+}
+
+.labelbox {
+      background-color: lightgrey;
+      border-left: 8px solid #c92ad2;
+      color: #c92ad2;
+      margin: 2em 0;
+      padding: 2em;
+  }
+
+  .save{
+    position: relative;
+    top: 350px;
+    left: 280px;
+    color: grey;
+    background-color: white;
+    font-size:20px;
+    width: 100px;
+    height: 45px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    outline:0;
+    border: 1px solid #ccc;
+    cursor:pointer;
+  }
+
+
+
+
+  .next{
+  position: relative;
+  top: 350px;
+  left: 280px;
+  color: #ff4500;
+  background-color: white;
+  font-size:20px;
+  width: 100px;
+  height: 45px;
+    border: 1px solid #ff4500;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  outline:0;
+  cursor:pointer;
+  }

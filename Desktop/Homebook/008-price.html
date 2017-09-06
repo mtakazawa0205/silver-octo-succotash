@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="008-price.css" type="text/css">
+    <link rel="stylesheet" href="scroll-bar.css" type="text/css">
+    <script src="moment.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="jquery-ui.custom.min.js" type="text/javascript"></script>
+    <script src="fullcalendar.min.js" type="text/javascript"></script>
+    <script src="ja.js" type="text/javascript"></script>
+    <script type="text/javascript" src="007-calender.js"></script>
+
+    <a href="001-toppage.html"
+        style="text-decoration: none;
+                font-size: 32pt;
+                color: #ff4500;
+                font-family: Helvetica;
+                text-decoration: none;">Homebook</a>
+
+    <hr size="1" color="#ccc" position="relative" top="-10px">
+
+
+
+    <style type="text/css">
+
+    body {
+       margin: 0px;    /* 外側の4余白をゼロに */
+       padding: 20px 40px; /* 内側の余白を40pxに */
+    }
+    </style>
+
+  </head>
+
+  <body>
+
+
+    <div style="font-size: 30pt;
+                color: grey;
+                font-family: Helvetica;
+                position: absolute;
+                top: 200px;
+                left: 150px;">
+                Price Setting
+              </div>
+
+
+
+
+    <div class="circle1"></div>
+    <div class="circle1s"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+    <div class="circle5"></div>
+
+    <div class="profile">Profile</div>
+    <div class="room"></rp>Room</div>
+    <div class="meal-rule">Calendar</div>
+    <div class="calendar">Price</div>
+    <div class="pr">PR</div>
+
+
+    <span style=
+              "position: absolute;
+              top: 215px;
+              right: 180px;
+              border: 0.5px;
+              border-color: lightgrey;
+              border-shadow: none;
+              width: 250px;
+              z-index:-1;"><hr></hr></span>
+
+
+
+
+
+              <!-- Price setting-->
+
+    <div class="select">Please set price for staying your room.(Required)</div>
+
+    <div style="position: absolute; top: 300px; left: 200px;">
+
+
+
+
+
+    <div class="float">
+      <span class="jpy">¥</span>
+        <p>Room Price <input type="number" id="room_price" style class= "roomprice"> 　　　/ night <br></p>
+    </div>
+
+    <div class="float">
+      <span class="jpy">¥</span>
+      <p>Additional fee <input type="number" id="additional_fee" style class= "additionalfee"> 　　/ head (charged for extra person) <br></p>
+    </div>
+
+    <div class="float">
+      <span class="jpy">¥</span>
+      <p>Cleaning fee <input type="number" id="cleaning_fee" style class= "cleaningfee"> 　　  / stay <br></p>
+    </div>
+
+    <div class="float">
+      <span class="jpy">¥</span>
+      <p>Deposit <input type="number" id="deposit" style class= "deposit"> </p>
+    </div>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        // 入力内容チェックのための関数
+        function input_check(){
+        var result = true;
+
+        // エラー用装飾のためのクラスリセット
+        $('#roomprice').removeClass("inp_error");
+        $('#additionalfee').removeClass("inp_error");
+        $('#cleaningfee').removeClass("inp_error");
+        $('#deposit').removeClass("inp_error");
+
+
+        // 入力エラー文をリセット
+        $("#roomprice_error").empty();
+        $("#additionalfee_error").empty();
+        $("#cleaningfee_error").empty();
+        $("#deposit_error").empty();
+
+
+        // 入力内容セット
+        var roomprice  = $("#roomprice").val();
+        var additionalfee  = $("#additionalfee").val();
+        var cleaningfee  = $("#cleaningfee").val();
+        var deposit  = $("#deposit").val();
+
+
+        // 入力内容チェック
+
+        // ルームプライス
+        if(roomprice == ""){
+            $("#roomprice_error").html("<i class='fa fa-exclamation-circle'></i> Userroomprice is required.");
+            $("#roomprice").addClass("inp_error");
+            result = false;
+        }
+
+        else if(roomprice.length > 25){
+            $("#roomprice_error").html("<i class='fa fa-exclamation-circle'></i> Please input userroomprice within 25 values.");
+            $("#roomprice").addClass("inp_error");
+            result = false;
+        }
+
+        // 追加費用
+        if(additionalfee == ""){
+            $("#additionalfee_error").html("<i class='fa fa-exclamation-circle'></i> Email address is required.");
+            $("#additionalfee").addClass("inp_error");
+            result = false;
+        }
+
+        else if(!additionalfee.match(/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/)){
+            $('#additionalfee_error').html("<i class='fa fa-exclamation-circle'></i> Please input a valid email address.");
+            $("#additionalfee").addClass("inp_error");
+            result = false;
+        }
+
+        else if(additionalfee.length > 255){
+            $('#additionalfee_error').html("<i class='fa fa-exclamation-circle'></i> Please input a valid email address.");
+            $("#additionalfee").addClass("inp_error");
+            result = false;
+        }
+
+        // 清掃費用
+        if(cleaningfee == ""){
+            $("#cleaningfee_error").html("<i class='fa fa-exclamation-circle'></i> Email address is required.");
+            $("#cleaningfee").addClass("inp_error");
+            result = false;
+        }
+
+        if(!additionalfee.match(/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/)){
+            $('#cleaningfee_error').html("<i class='fa fa-exclamation-circle'></i> Please input a valid email address.");
+            $("#cleaningfee").addClass("inp_error");
+            result = false;
+        }
+
+        else if(cleaningfee.length > 255){
+            $('#cleaningfee_error').html("<i class='fa fa-exclamation-circle'></i> Please input a valid email address.");
+            $("#cleaningfee").addClass("inp_error");
+            result = false;
+        }
+        return result;
+        }
+</script>
+
+
+
+
+    <button class="save">Save</button>
+    <button class="next > " " onclick="location.href='009-pr.html'">Next > </button>
+
+
+</div>
+
+
+
+    <span style=
+              "position: absolute;
+              top: 215px;
+              right: 180px;
+              border: 0.5px;
+              border-color: lightgrey;
+              border-shadow: none;
+              width: 250px;
+              z-index:-1;"><hr></hr></span>
+
+
+
+
+
+  </body>
