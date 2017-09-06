@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<head>
+<link rel="stylesheet" href="003-new register by email.css" type="text/css">
+<link rel="stylesheet" href="scroll-bar.css" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+
+
+
+
+<div style="font-size: 48pt;color: Red; font-family: Helvetica";> Homebook </div>
+<div style="font-size: 18pt;color:#b6b6b6; font-family: Helvetica";> meet something new from homestay in Japan </div>
+
+<style type="text/css">
+body {
+   margin: 0px;    /* 外側の4余白をゼロに */
+   padding: 20px 40px; /* 内側の余白を40pxに */
+}
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<!-- Bootstrap 3.3.6 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+<!-- Sign in form-->
+
+<div style="position: absolute; top: 200px; left: 500px; z-index: 1;">
+
+
+  <div class="username" >
+      <h5>User Name<span class="required"> (required)</span></h5>
+    </div>
+    <form class="form-inline">
+       <div class="form-group has-feedback">
+      <input type="text" id="name"
+                   style="
+                   box shadow: 0;
+                   font-size:16px;
+                   border: 1;
+                   width: 290px;
+                   height: 35px;
+                   padding: 5px;
+                   outline: 0;
+                   border-radius: 10px;
+                   border: 1px solid #ccc"></input>
+     <span id="name_error" class="error_m"> </span>
+   </div>
+ </form>
+
+
+
+
+<div class="emailaddress">
+ <h5>Email Address<span class="required"> (required)</span></h5>
+</div>
+
+<form class="form-inline">
+   <div class="form-group has-feedback">
+   <input type="email" id="emailaddress"
+                    style="
+                    box shadow: 0;
+                    font-size:16px;
+                    border: 1;
+                    width: 290px;
+                    height: 35px;
+                    padding: 5px;
+                    outline: 0;
+                    border-radius: 10px;
+                    border: 1px solid #ccc">
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span></input>
+                  <span id="emailaddress_error" class="error_m"> </span>
+                </div>
+</form>
+
+  <div class="password">
+    <h5>Password<span class="required"> (required)</span></h5>
+  </div>
+
+<form class="form-inline">
+   <div class="form-group has-feedback">
+       <input type="password" id="password" placeholder="6 to 12 alphanumeric values"
+                   style="
+                   box shadow: 0;
+                   font-size:16px;
+                   border: 1;
+                   width: 290px;
+                   height: 35px;
+                   padding: 5px;
+                   outline: 0;
+                   border-radius: 10px;
+                   border: 1px solid #ccc"><span class="glyphicon glyphicon-lock form-control-feedback"></span></input>
+     <span id="password_error" class="error_m"> </span>
+ </div>
+ </form>
+
+
+
+
+   <div class="confirmationpassword">
+     <h5>confirmation password<span class="required"> (required)</span></h5>
+   </div>
+
+<form class="form-inline">
+  <div class="form-group has-feedback">
+      <input type="password" id="confirmationpassword" placeholder="6 to 12 alphanumeric values"
+                    style="
+                    box shadow: 0;
+                    font-size:16px;
+                    border: 1;
+                    width: 290px;
+                    height: 35px;
+                    padding: 5px;
+                    outline: 0;
+                    border-radius: 10px;
+                    border: 1px solid #ccc"><span class="glyphicon glyphicon-lock form-control-feedback"></span></input>
+   <span id="confirmationpassword_error" class="error_m"> </span>
+</div>
+ </form>
+
+<input class="btn_submit" id="btn_submit"
+  type="submit" value="Register" onclick="input_check();return false;">
+
+
+<div class="notice">
+  Then, You will receive URL in your email-box within 24 hours. Please click it to complete sign up.</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+    // 入力内容チェックのための関数
+    function input_check(){
+    var result = true;
+
+    // エラー用装飾のためのクラスリセット
+    $('#name').removeClass("inp_error");
+    $('#emailaddress').removeClass("inp_error");
+    $('#password').removeClass("inp_error");
+    $('#confirmationpassword').removeClass("inp_error");
+
+
+    // 入力エラー文をリセット
+    $("#name_error").empty();
+    $("#emailaddress_error").empty();
+    $("#password_error").empty();
+    $("#confirmationpassword_error").empty();
+
+
+    // 入力内容セット
+    var name  = $("#name").val();
+    var emailaddress  = $("#emailaddress").val();
+    var password  = $("#password").val();
+    var confirmationpassword  = $("#confirmationpassword").val();
+
+
+    // 入力内容チェック
+
+    // お名前
+    if(name == ""){
+        $("#name_error").html("<i class='fa fa-exclamation-circle'></i> Username is required.");
+        $("#name").addClass("inp_error");
+        result = false;
+    }
+
+    else if(name.length > 25){
+        $("#name_error").html("<i class='fa fa-exclamation-circle'></i> Please input username within 25 values.");
+        $("#name").addClass("inp_error");
+        result = false;
+    }
+
+    // メールアドレス
+    if(emailaddress == ""){
+        $("#emailaddress_error").html("<i class='fa fa-exclamation-circle'></i> Email address is required.");
+        $("#emailaddress").addClass("inp_error");
+        result = false;
+    }
+
+    else if(!emailaddress.match(/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/)){
+        $('#emailaddress_error').html("<i class='fa fa-exclamation-circle'></i> Please input a valid email address.");
+        $("#emailaddress").addClass("inp_error");
+        result = false;
+    }
+
+    else if(emailaddress.length > 255){
+        $('#emailaddress_error').html("<i class='fa fa-exclamation-circle'></i> Please input a valid email address.");
+        $("#emailaddress").addClass("inp_error");
+        result = false;
+    }
+
+
+// パスワード
+    if(password == ""){
+        $("#password_error").html("<i class='fa fa-exclamation-circle'></i> Password is required.");
+        $("#password").addClass("inp_error");
+        result = false;
+    }
+
+    else if(!password.match(/^(?=.*?[a-z])(?=.*?\d)[a-z\d]{6,12}$/i)){
+        $('#password_error').html("<i class='fa fa-exclamation-circle'></i> Please input a valid password.");
+        $("#password").addClass("inp_error");
+        result = false;
+    }
+
+
+
+
+// 確認用パスワード
+    if(confirmationpassword == ""){
+        $("#confirmationpassword_error").html("<i class='fa fa-exclamation-circle'></i> Confirmation password is required.");
+        $("#confirmationpassword").addClass("inp_error");
+        result = false;
+    }
+
+    else if (password != confirmationpassword) {
+        $("#confirmationpassword_error").html("<i class='fa fa-exclamation-circle'></i> Password doesn't match.");
+        $("#confirmationpassword").addClass("inp_error");
+      result = false;
+    }
+
+
+
+    return result;
+}
+</script>
+
+
+</body>

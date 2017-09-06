@@ -1,0 +1,87 @@
+.box{
+    position: absolute;
+    top:200px;
+    left: 400px;
+    width:600px;
+    height:600px;
+    border:1px solid lightgrey;
+    background-color:white;
+  }
+
+.border{
+  position: absolute;
+  top: 350px;
+  left: 450px;
+  border: 1px;
+  border-color: lightgrey;
+  width: 100px;
+}
+
+
+.facebook{
+    background-color: #315096;
+    color: white;
+    font-size:20px;
+    position:absolute;
+    top:280px;
+    left: 550px;
+    width: 300px;
+    height: 45px;
+    border-radius: 20px;
+		-webkit-border-radius: 10px;
+    outline:0;
+    border: none;
+    cursor:pointer;
+    }
+
+
+.google{
+  background-color: #DD4B39;
+  color: white;
+  font-size:20px;
+  position:absolute;
+  top:330px;
+  left: 550px;
+  width: 300px;
+  height: 45px;
+  border-radius: 20px;
+  -webkit-border-radius: 10px;
+  outline:0;
+  border: none;
+  cursor:pointer;
+}
+
+
+
+.login{
+  background-color: #40AD3F;
+  color: white;
+  font-size:20px;
+  position:absolute;
+  top:580px;
+  left: 550px;
+  width: 300px;
+  height: 45px;
+  border-radius: 20px;
+  -webkit-border-radius: 10px;
+  outline:0;
+  border: none;
+  cursor:pointer;
+}
+
+.register{
+  background-color:white;
+  color: grey;
+  font-size:20px;
+  position:absolute;
+  top:720px;
+  left: 550px;
+  width: 300px;
+  height: 45px;
+  border-radius: 20px;
+  -webkit-border-radius: 10px;
+  border-color: lightgrey;
+  outline:0;
+  border: 1px solid #ccc;
+  cursor:pointer;
+}

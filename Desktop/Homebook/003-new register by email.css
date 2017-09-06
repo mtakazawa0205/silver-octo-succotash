@@ -1,0 +1,81 @@
+
+.box{
+
+
+    width:600px;
+    height:700px;
+    border:1px solid lightgrey;
+    background-color:white;
+    z-index: 0;
+  }
+
+
+.required {color:red;}
+
+.username {
+        color:grey;
+
+}
+
+.emailaddress{
+       color:grey;
+
+}
+
+.password {
+       color:grey;
+}
+
+.confirmationpassword {
+       color:grey;
+}
+
+::-webkit-input-placeholder {
+  color: #ccc;
+}
+::-moz-placeholder {
+  color: #ccc; opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #ccc;
+}
+
+
+.btn_submit{
+    position: relative;
+    top: 30px;
+    font-size:20px;
+    color: white;
+    width: 290px;
+    height: 45px;
+    outline:0;
+    background-color: #315096;
+    border: 1px solid #ccc;
+    cursor:pointer
+  }
+
+.notice{
+    color: grey;
+    font-size: 9px;
+    position: relative;
+    top: 60px;
+
+
+}
+
+.inp_error {
+    border: 1px solid #F88A8A;
+    background: #F4D4D4;
+    display: block;
+
+}
+
+
+
+span.error_m {
+    font-size: 15px;
+    font-weight: normal;
+    white-space: normal;
+    color: #FF4040;
+    display: block;
+}
